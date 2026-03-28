@@ -1,0 +1,95 @@
+@if (!isReady) {
+<div class="loading-container">
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  <p>Loading client data...</p>
+</div>
+}
+
+@if (isReady) {
+
+<mat-card class="client-card">
+  <mat-card-title>Client Information</mat-card-title>
+
+  <mat-card-content>
+    <div class="client-grid">
+      @for (field of CLIENT_FORM_CONFIG; track field.key) {
+      <mat-form-field appearance="outline" class="client-field">
+        <mat-label>{{ field.label }}</mat-label>
+        <input matInput [type]="field.type" [readonly]="field.readonly" [value]="getValue(field.key)" />
+      </mat-form-field>
+      }
+    </div>
+
+    <button mat-raised-button color="primary" (click)="exportClientPDF()">
+      Export Client Data
+    </button>
+
+  </mat-card-content>
+</mat-card>
+
+<br />
+
+<mat-card class="transactions-card">
+  <mat-card-title>Transactions</mat-card-title>
+
+  <mat-card-content>
+    <table mat-table [dataSource]="transactions" class="mat-elevation-z2 full-width">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let t">{{ t.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Date</th>
+        <td mat-cell *matCellDef="let t">{{ t.date }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let t">{{ t.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="city">
+        <th mat-header-cell *matHeaderCellDef>City</th>
+        <td mat-cell *matCellDef="let t">{{ t.city }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="bic">
+        <th mat-header-cell *matHeaderCellDef>BIC</th>
+        <td mat-cell *matCellDef="let t">{{ t.bic }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="bankCard">
+        <th mat-header-cell *matHeaderCellDef>Card</th>
+        <td mat-cell *matCellDef="let t">{{ t.bankCard }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef>Amount</th>
+        <td mat-cell *matCellDef="let t">{{ t.amount }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef>Type</th>
+        <td mat-cell *matCellDef="let t">{{ t.type }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+        <td mat-cell *matCellDef="let t">
+          <span class="status-chip" [class]="t.status.toLowerCase()">
+            {{ t.status }}
+          </span>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['id','date','name','city','bic','bankCard','amount','type','status']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['id','date','name','city','bic','bankCard','amount','type','status']">
+      </tr>
+
+    </table>
+  </mat-card-content>
+</mat-card>
+
+}

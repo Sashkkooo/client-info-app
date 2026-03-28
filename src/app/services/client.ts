@@ -10,11 +10,11 @@ import { Observable } from 'rxjs';
 export class ClientService {
   constructor(private http: HttpClient) {}
 
-  getClients(): Observable<Client[]> {
-    return this.http.get<Client[]>('assets/client.json');
+  getClients(): Observable<Client> {
+    return this.http.get<Client>('client.json');
   }
 
   getTransactions(): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>('assets/transaction.json');
+    return this.http.get<Transaction[]>('transactions.json');
   }
 }

@@ -1,59 +1,17 @@
-# ClientApp
+How to install and run the project:
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.5.
+    -npm install
+    -ng serve
 
-## Development server
+The application will start at:
 
-To start a local development server, run:
+    -http://localhost:4200
+    
+Angular version used:
 
-```bash
-ng serve
-```
+    This project was built using Angular 21 with standalone components and the new Angular control flow syntax (@if, @for).
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+Decisions made while building the project:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    While implementing the task, I focused on creating a clean, readable, and structured UI that reflects real‑world banking interfaces. I used Angular Material to ensure consistent styling and accessibility, and I organized the client form using a configuration file so the template remains dynamic and easy to maintain. Data loading is handled through a dedicated service, and the UI becomes visible only after both JSON files are fully loaded. I added an action button that exports the client information as a PDF, demonstrating practical UI logic and enhancing the user experience. Overall, the goal was to balance clarity, maintainability, and visual quality.

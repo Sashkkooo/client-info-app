@@ -1,3 +1,5 @@
+
+
 export interface Client {
     name: string;
     secondName: string;
@@ -9,3 +11,4 @@ export interface Client {
     accountNumber: string;
     bankCard: string;
 }
+export type ClientKey = keyof Client;

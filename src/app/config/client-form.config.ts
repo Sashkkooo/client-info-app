@@ -1,10 +1,11 @@
+import { ClientKey } from "../models/client.model";
+
 export interface FormFieldConfig {
-    key: string;
+    key: ClientKey;
     label: string;
     type: string;
     readonly?: boolean;
 }
-
 
 export const CLIENT_FORM_CONFIG: FormFieldConfig[] = [
     { key: 'name', label: 'First Name', type: 'text', readonly: true },
