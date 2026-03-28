@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "date": "2025-03-01",
+        "name": "Georgi Petrov",
+        "city": "Sofia",
+        "bic": "BNBGBGSD",
+        "bankCard": "4532 **** **** 1234",
+        "amount": 1500.00,
+        "type": "Credit",
+        "status": "Completed"
+    },
+    {
+        "id": 2,
+        "date": "2025-03-05",
+        "name": "Maria Ivanova",
+        "city": "Plovdiv",
+        "bic": "RZBBGSF",
+        "bankCard": "4716 **** **** 5588",
+        "amount": 340.50,
+        "type": "Debit",
+        "status": "Pending"
+    },
+    {
+        "id": 3,
+        "date": "2025-03-10",
+        "name": "Stefan Dimitrov",
+        "city": "Varna",
+        "bic": "UNCRBGSF",
+        "bankCard": "5412 **** **** 9021",
+        "amount": 75.00,
+        "type": "Debit",
+        "status": "Failed"
+    },
+    {
+        "id": 4,
+        "date": "2025-03-14",
+        "name": "Elena Kostadinova",
+        "city": "Burgas",
+        "bic": "TTBBBG22",
+        "bankCard": "4929 **** **** 3347",
+        "amount": 2200.00,
+        "type": "Credit",
+        "status": "Completed"
+    },
+    {
+        "id": 5,
+        "date": "2025-03-18",
+        "name": "Nikolai Georgiev",
+        "city": "Stara Zagora",
+        "bic": "CECBBGSF",
+        "bankCard": "5105 **** **** 7762",
+        "amount": 90.00,
+        "type": "Debit",
+        "status": "Pending"
+    },
+    {
+        "id": 6,
+        "date": "2025-03-20",
+        "name": "Georgi Petrov",
+        "city": "Sofia",
+        "bic": "BNBGBGSD",
+        "bankCard": "4532 **** **** 1234",
+        "amount": 650.00,
+        "type": "Debit",
+        "status": "Completed"
+    },
+    {
+        "id": 7,
+        "date": "2025-03-22",
+        "name": "Maria Ivanova",
+        "city": "Plovdiv",
+        "bic": "RZBBGSF",
+        "bankCard": "4716 **** **** 5588",
+        "amount": 120.75,
+        "type": "Credit",
+        "status": "Completed"
+    },
+    {
+        "id": 8,
+        "date": "2025-03-24",
+        "name": "Stefan Dimitrov",
+        "city": "Varna",
+        "bic": "UNCRBGSF",
+        "bankCard": "5412 **** **** 9021",
+        "amount": 480.00,
+        "type": "Credit",
+        "status": "Pending"
+    },
+    {
+        "id": 9,
+        "date": "2025-03-26",
+        "name": "Elena Kostadinova",
+        "city": "Burgas",
+        "bic": "TTBBBG22",
+        "bankCard": "4929 **** **** 3347",
+        "amount": 55.00,
+        "type": "Debit",
+        "status": "Failed"
+    }
+]
